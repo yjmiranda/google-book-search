@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const axios = require("axios");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require("./models");
@@ -19,6 +20,19 @@ app.get("/api/books",(req,res)=>{
     .then(dbBooks =>{
       res.json(dbBooks);
     }).catch(err =>{
+      res.send(err);
+    });
+});
+
+app.get("/api/:search",(req,res)=>{
+  const params = {
+    q: req.params.search,
+    key: "AIzaSyA0my9YP87S1Sj345dHQEOA4CrNA9THlpc"
+  }
+  axios.get("https://www.googleapis.com/books/v1/volumes?", {params})
+    .then(results =>{
+      res.json(results.data);
+    }).catch(err=>{
       res.send(err);
     });
 });
