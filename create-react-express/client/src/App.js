@@ -15,7 +15,8 @@ function App() {
     <Search/>
 
     <Container className="results">
-      <h3>Results</h3>
+      <h3 id="result">Results:</h3>
+
       <Media/>
     </Container>
     </div>

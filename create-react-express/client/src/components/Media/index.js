@@ -1,9 +1,11 @@
 import React from 'react';
 import { Media, Button } from 'react-bootstrap';
+import "./style.css";
+
 
 function Mediab () {
     return (
-    <div>
+    <div className="media-div">
         <Media>
         <Media.Body>
 
