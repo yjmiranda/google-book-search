@@ -1,17 +1,23 @@
 import React from 'react';
-import { FormControl, Form, Button, Container } from 'react-bootstrap';
+import { Col, FormControl, Form, Button, Container } from 'react-bootstrap';
+import "./style.css";
+
 
  function Searchb() {
 
 return (
 
-    <Container>
+    <Container className="search-container">
 
-    <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-success">Search</Button>
-    </Form>
-
+        <h4>Book Search</h4>
+        <h5>Book</h5>
+        
+    <Col>
+        <Form.Row>
+            <FormControl type="text" placeholder="Search"/>
+        </Form.Row>
+        <Button variant="outline-success" className="float-right" >Search</Button>
+    </Col>
     </Container>
 )};
 
