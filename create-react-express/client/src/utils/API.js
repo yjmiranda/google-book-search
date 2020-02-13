@@ -14,7 +14,7 @@ export default ({
         return axios.get("/api/books")
     },
     // search books
-    searchBooks: function(){
-        return axios.get("/api/search", {params: {q: query}})
+    searchBooks: function(book){
+        return axios.get(`/api/search/${book}`)
     }
 });

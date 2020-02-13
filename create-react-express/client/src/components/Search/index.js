@@ -3,7 +3,7 @@ import { Col, FormControl, Form, Button, Container } from 'react-bootstrap';
 import "./style.css";
 
 
- function Searchb() {
+ function Searchb(props) {
 
 return (
 
@@ -16,7 +16,7 @@ return (
         <Form.Row>
             <FormControl type="text" placeholder="Search"/>
         </Form.Row>
-        <Button variant="outline-success" className="float-right" >Search</Button>
+        <Button variant="primary" onClick={props.handleSubmit} className="float-right"{...props} >Search</Button>
     </Col>
     </Container>
 )};
