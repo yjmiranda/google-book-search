@@ -5,14 +5,12 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.19.2",
-=======
->>>>>>> 1541feb8478ad4520bb4b3eae1a25893640a9a47
     "bootstrap": "^4.4.1",
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.6.3",
+    "react-router": "^5.1.2",
     "react-scripts": "^2.1.1"
   },
   "scripts": {

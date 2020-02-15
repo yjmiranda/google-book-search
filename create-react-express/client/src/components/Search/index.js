@@ -16,7 +16,7 @@ return (
         <Form.Row>
             <FormControl type="text" placeholder="Search"/>
         </Form.Row>
-        <Button variant="outline-success" className="float-right" >Search</Button>
+        <Button variant="primary" className="float-right" >Search</Button>
     </Col>
     </Container>
 )};

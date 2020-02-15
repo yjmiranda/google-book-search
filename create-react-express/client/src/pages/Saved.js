@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { Container, List, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
+import { List } from 'react-bootstrap/List';
+import { ListItem } from 'react-bootstrap/ListItem';
 import API from '../utils/API';
 
 
 class Saved extends Component {
     state = {
-        books =[],
-        title = "",
-        authors = "",
-        description ="",
-        image = "",
-        link = ""
+        books: [],
+        title: "",
+        authors: "",
+        description:"",
+        image: "",
+        link: ""
     };
 
     componentDidMount() {
@@ -20,7 +22,7 @@ class Saved extends Component {
     loadBooks = () => {
         API.getBooks()
             .then(res =>
-                this.setState({ books: res.data, title ="", authors: "", description: "", image: "", link: "" })
+                this.setState({ books: res.data, title: "", authors: "", description: "", image: "", link: "" })
                     .catch(err => console.log(err))
             )
     }
@@ -43,6 +45,7 @@ class Saved extends Component {
                                 <strong>
                                     {book.title} by {book.authors}
                                 </strong>
+
                                 <p>{book.description}</p>
                                 <Button href={book.link}>View</Button>
                                 <Button onClick={() => this.deleteBook(book._id)}>Delete</Button>
