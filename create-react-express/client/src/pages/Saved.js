@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { List } from 'react-bootstrap/List';
-import { ListItem } from 'react-bootstrap/ListItem';
+// import { List } from 'react-bootstrap/List';
+// import { ListItem } from 'react-bootstrap/ListItem';
 import API from '../utils/API';
 
 
@@ -37,7 +37,7 @@ class Saved extends Component {
     render() {
         return (
             <Container>
-                {this.state.books.length ? (
+                {/* {this.state.books.length ? (
                     <List>
                         {this.state.books.map(book => (
                             <ListItem key={book._id}>
@@ -52,9 +52,9 @@ class Saved extends Component {
                             </ListItem>
                         ))}
                     </List>
-                ) : (
+                ) : ( */}
                         <h3>No Results to Display</h3>
-                    )}
+                    {/* )} */}
             </Container>
         )
     };

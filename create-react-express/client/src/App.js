@@ -6,6 +6,7 @@ import "./App.css";
 // import { Container } from "react-bootstrap";
 // import Media from "./components/Media/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from './pages/Search';
 import Saved from "./pages/Saved"
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <div>
         <Navbar />
         <Switch>
-          {/* <Route exact path="/" component={search} /> */}
+          <Route exact path="/" component={Search} />
           <Route exact path="/saved" component={Saved} />
         </Switch>
       </div>
