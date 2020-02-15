@@ -24,9 +24,9 @@ app.get("/api/books",(req,res)=>{
     });
 });
 
-app.get("/api/:search",(req,res)=>{
+app.get("/api/search/:book",(req,res)=>{
   const params = {
-    q: req.params.search,
+    q: req.params.book,
     key: "AIzaSyA0my9YP87S1Sj345dHQEOA4CrNA9THlpc"
   }
   axios.get("https://www.googleapis.com/books/v1/volumes?", {params})

@@ -3,7 +3,7 @@ import { Col, FormControl, Form, Button, Container } from 'react-bootstrap';
 import "./style.css";
 
 
- function Searchb() {
+ function Searchb(props) {
 
 return (
 

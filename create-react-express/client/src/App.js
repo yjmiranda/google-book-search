@@ -1,19 +1,25 @@
 import React from "react";
+import Navbar from "./components/Navbar/index";
 import "./App.css";
-
-// import Saved from './pages/Saved';
-import Search from './pages/Search';
-
-
+// import Jumbotron from "./components/Jumbotron/index";
+// import SearchBar from "./components/Search/index";
+// import { Container } from "react-bootstrap";
+// import Media from "./components/Media/index";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Saved from "./pages/Saved"
 function App() {
   return (
     <div>
-
-      <Search/>
-
+      <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          {/* <Route exact path="/" component={search} /> */}
+          <Route exact path="/saved" component={Saved} />
+        </Switch>
+      </div>
+    </Router>
     </div>
   );
 }
-
-
 export default App;
