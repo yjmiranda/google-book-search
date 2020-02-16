@@ -10,8 +10,8 @@ return (
     <Navbar.Collapse id="basic-navbar-nav">
       
       <Nav className="mr-auto">
-        <Nav.Link href="#search">Search</Nav.Link>
-        <Nav.Link href="#save">Save</Nav.Link>
+        <Nav.Link href="/">Search</Nav.Link>
+        <Nav.Link href="/saved">Save</Nav.Link>
       </Nav>
 
     </Navbar.Collapse>

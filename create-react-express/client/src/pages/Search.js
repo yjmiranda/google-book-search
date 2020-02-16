@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "../components/Navbar/index";
 import Jumbotron from "../components/Jumbotron/index";
 import Search from "../components/Search/index";
 import { Container, Media, Button  } from "react-bootstrap";
@@ -38,7 +37,6 @@ class Find extends Component {
     render(){
         return (
             <div>
-            <Navbar/>
             <Jumbotron/>
 
             <Search/>

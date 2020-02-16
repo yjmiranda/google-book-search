@@ -7,7 +7,7 @@ import "./App.css";
 // import Media from "./components/Media/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Saved from "./pages/Saved"
-import search from "./pages/search"
+import Search from "./pages/Search"
 
 
 
@@ -18,7 +18,7 @@ function App() {
       <div>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={search} />
+          <Route exact path="/" component={Search} />
           <Route exact path="/saved" component={Saved} />
         </Switch>
       </div>
