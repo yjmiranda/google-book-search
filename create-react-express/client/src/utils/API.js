@@ -15,6 +15,6 @@ export default ({
     },
     // search books
     searchBooks: function(book){
-        return axios.get(`/api/search/${book}`)
+        return axios.get(`/api/search/${book}`);
     }
 });

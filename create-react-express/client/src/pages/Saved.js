@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Container, Button, Card, Col, Row, Jumbotron } from 'react-bootstrap';
+=======
+import { Container, Button } from 'react-bootstrap';
+// import { List } from 'react-bootstrap/List';
+// import { ListItem } from 'react-bootstrap/ListItem';
+>>>>>>> b416efa900d64ed90733e5247cbbb35a17f426c4
 import API from '../utils/API';
 import Header from "../components/Jumbotron/index";
 import "./LookFor.css"
@@ -11,8 +17,13 @@ class Saved extends Component {
         books: [],
         title: "",
         authors: "",
+<<<<<<< HEAD
         description: "",
         image:"",
+=======
+        description:"",
+        image: "",
+>>>>>>> b416efa900d64ed90733e5247cbbb35a17f426c4
         link: ""
     };
 
@@ -24,6 +35,7 @@ class Saved extends Component {
     loadBooks = () => {
         console.log("insode load books")
         API.getBooks()
+<<<<<<< HEAD
         
             .then(res => {
                 console.log(res.data)
@@ -31,6 +43,12 @@ class Saved extends Component {
                 })
                 .catch(err => console.log(err))
 
+=======
+            .then(res =>
+                this.setState({ books: res.data, title: "", authors: "", description: "", image: "", link: "" })
+                    .catch(err => console.log(err))
+            )
+>>>>>>> b416efa900d64ed90733e5247cbbb35a17f426c4
     }
 
     deleteBook = id => {
@@ -42,6 +60,7 @@ class Saved extends Component {
 
     render() {
         return (
+<<<<<<< HEAD
             <div>
             <Header/>
             <Container classNamme="results">
@@ -75,6 +94,27 @@ class Saved extends Component {
                 )}
              </Row>  
    
+=======
+            <Container>
+                {/* {this.state.books.length ? (
+                    <List>
+                        {this.state.books.map(book => (
+                            <ListItem key={book._id}>
+                                <img src={book.image} />
+                                <strong>
+                                    {book.title} by {book.authors}
+                                </strong>
+
+                                <p>{book.description}</p>
+                                <Button href={book.link}>View</Button>
+                                <Button onClick={() => this.deleteBook(book._id)}>Delete</Button>
+                            </ListItem>
+                        ))}
+                    </List>
+                ) : ( */}
+                        <h3>No Results to Display</h3>
+                    {/* )} */}
+>>>>>>> b416efa900d64ed90733e5247cbbb35a17f426c4
             </Container>
             </div>
         )

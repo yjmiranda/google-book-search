@@ -10,6 +10,10 @@
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.6.3",
+<<<<<<< HEAD
+=======
+    "react-router": "^5.1.2",
+>>>>>>> b416efa900d64ed90733e5247cbbb35a17f426c4
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.1"
   },
