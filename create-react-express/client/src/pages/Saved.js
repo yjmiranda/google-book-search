@@ -21,7 +21,7 @@ class Saved extends Component {
     };
 
     loadBooks = () => {
-        console.log("insode load books")
+        console.log("inside load books")
         API.getBooks()
         
             .then(res => {
@@ -52,18 +52,18 @@ class Saved extends Component {
                             {this.state.books.map(book => (
                             <Card key={book.title} style={{ width: '100%', margin: '10px'}} className="shadow-sm">
                                 <Row>
-                                <Col className="col-3">
-                                    <Card.Img className="ml-5 pl-5 pt-5" style={{width: "45%"}} src={book.image}></Card.Img>
-                                </Col>
-                                <Col className="col-9">
-                                <Card.Body>
-                                <Button variant="danger" className="float-right" onClick={() => this.deleteBook(book._id)}>Delete</Button>
-                                <Button className="float-right mr-2" href={book.link}>View</Button>
-                                    <Card.Text ><strong>{book.title}</strong></Card.Text>
-                                    <Card.Text >Written By: <strong>{book.authors}</strong></Card.Text>
-                                    <Card.Text >{book.description}</Card.Text>
-                                </Card.Body>
-                                </Col>
+                                    <Col className="col-3">
+                                        <Card.Img className="ml-5 pl-5 pt-5" style={{width: "45%"}} src={book.image}></Card.Img>
+                                    </Col>
+                                    <Col className="col-9">
+                                        <Card.Body>
+                                        <Button variant="danger" className="float-right" onClick={() => this.deleteBook(book._id)}>Delete</Button>
+                                        <Button className="float-right mr-2" href={book.link}>View</Button>
+                                            <Card.Text ><strong>{book.title}</strong></Card.Text>
+                                            <Card.Text >Written By: <strong>{book.authors}</strong></Card.Text>
+                                            <Card.Text >{book.description}</Card.Text>
+                                        </Card.Body>
+                                    </Col>
                                 </Row>
                                 </Card>
                             ))}
