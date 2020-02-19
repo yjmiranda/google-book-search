@@ -98,7 +98,7 @@ class Find extends Component {
                             </p>
                             {/* <p src="{book.volumeInfo.accessInfo.webReaderLink}">{book.volumeInfo.title}</p> */}
                             </Media.Body>
-                        <Button variant="danger" href="">View</Button>
+                        <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
                         <Button variant="success">Save</Button>
                     </Media>
                 </div>
