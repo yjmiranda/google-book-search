@@ -3,10 +3,7 @@ import Jumbotron from "../components/Jumbotron/index";
 import { Container, Media, Button, Image,Form,FormControl } from "react-bootstrap";
 import API from "../utils/API";
 import "./style.css";
-
-
 class Find extends Component {
-
     state = {
         books: [],
         title: "",
@@ -15,7 +12,6 @@ class Find extends Component {
         image: "",
         link: ""
     }
-
     componentDidMount(){
         this.LoadBook()
     }
@@ -25,7 +21,6 @@ class Find extends Component {
             [name] : value 
         })
     }   
-
     handleFormSubmit = event =>{
         event.preventDefault()
         API.searchBooks(this.state.title)
@@ -33,19 +28,15 @@ class Find extends Component {
                   
         .catch(err => console.log(err))
     }
-
     LoadBook = () => {
         API.searchBooks(this.state.title)
         .then(res => {
         
             this.setState({books: res.data.items})
-
             console.log(res.data.items);
             // console.log(this.state.books);
         })
     }
-
-
     render(){
         return (
             <div>
@@ -63,14 +54,10 @@ class Find extends Component {
                     </Button>
                 </Form>
             </Container>
-
-
             <Container className="results">
             <h3 id="result">Results:</h3>
-
             <div>
                 {this.state.books.map(book => (
-
                 <div className="media-div">
                     <Media key={book.title}>
                         <Media.Body>
@@ -106,15 +93,12 @@ class Find extends Component {
                             </strong></h6>
                             )
                             }
-
-
                             <p>
                                 Description: {book.volumeInfo.description}
                             </p>
                             {/* <p src="{book.volumeInfo.accessInfo.webReaderLink}">{book.volumeInfo.title}</p> */}
-
                             </Media.Body>
-                        <Button variant="danger">View</Button>
+                        <Button variant="danger" href="">View</Button>
                         <Button variant="success">Save</Button>
                     </Media>
                 </div>
@@ -122,13 +106,9 @@ class Find extends Component {
                 ))} 
                 </div>
             
-
             </Container>
             </div>
         );
     }
 }
-
-
-
 export default Find;
