@@ -34,8 +34,22 @@ class Find extends Component {
         
             this.setState({books: res.data.items})
             console.log(res.data.items);
-            // console.log(this.state.books);
         })
+    }
+    saveButtonSubmit = (event) =>{
+        event.preventDefault()
+        const infoArr = event.target.value;
+        const infoSplit  = infoArr.split(",")
+        API.addBooks({
+            title: infoSplit[0],
+            authors: infoSplit[2],
+            description: event.target.name,
+            image: infoSplit[1],
+            link: infoSplit[3]
+        }).then(res =>{
+            console.log(res)
+        })
+        .catch(err => console.log(err))
     }
     render(){
         return (
@@ -99,7 +113,7 @@ class Find extends Component {
                             {/* <p src="{book.volumeInfo.accessInfo.webReaderLink}">{book.volumeInfo.title}</p> */}
                             </Media.Body>
                         <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
-                        <Button variant="success">Save</Button>
+                        <Button variant="success" type="submit" onClick={this.saveButtonSubmit} name={book.volumeInfo.description} value={[book.volumeInfo.title,book.volumeInfo.imageLinks.thumbnail,book.volumeInfo.authors[0],book.volumeInfo.previewLink]}>Save</Button>
                     </Media>
                 </div>
                 
