@@ -107,9 +107,16 @@ class Find extends Component {
                             </strong></h6>
                             )
                             }
+                            {book.volumeInfo.description ?(
                             <p>
                                 Description: {book.volumeInfo.description}
                             </p>
+                            ):(
+                                <p>
+                                Description: description not found
+                            </p> 
+                            )
+                            }
                             {/* <p src="{book.volumeInfo.accessInfo.webReaderLink}">{book.volumeInfo.title}</p> */}
                             </Media.Body>
                         <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
